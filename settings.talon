@@ -49,6 +49,10 @@ settings():
     # work in some applications. You may wish to enable this on a
     # per-application basis.
     # user.context_sensitive_dictation = 1
+    imgui.dark_mode = 1
 
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
+
+
+tag(): user.full_mouse_grid_enabled
