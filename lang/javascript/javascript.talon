@@ -51,3 +51,6 @@ state spread: "..."
 
 from import:
     user.insert_between(' from  "', '"')
+
+console log:
+    user.insert_between("console.log(", ")")
