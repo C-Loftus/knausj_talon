@@ -56,3 +56,4 @@ settings():
 
 
 tag(): user.full_mouse_grid_enabled
+tag(): user.cursorless_experimental_snippets

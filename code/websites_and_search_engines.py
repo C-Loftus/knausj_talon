@@ -17,7 +17,6 @@ website_defaults = {
     "talon practice":"https://chaosparrot.github.io/talon_practice/",
     "talon repository search": "https://search.talonvoice.com/search/",
     "amazon": "https://www.amazon.com/",
-    "dropbox": "https://dropbox.com/",
     "google": "https://www.google.com/",
     "google calendar": "https://calendar.google.com",
     "google maps": "https://maps.google.com/",
