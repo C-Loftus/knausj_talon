@@ -6,7 +6,11 @@ experiment: anchor-file
 
 # Everything here should call `auto_insert()` (instead of `insert()`), to preserve the state to correctly auto-capitalize/auto-space.
 # (Talonscript string literals implicitly call `auto_insert`, so there's no need to wrap those)
+
+### comment the line below and uncomment the line below that if you want to getDictation mode working better with mixed mode 
 <user.raw_prose>: auto_insert(raw_prose)
+# <user.raw_prose>: user.dictation_insert(raw_prose)
+
 cap: user.dictation_format_cap()
 # Hyphenated variants are for Dragon.
 (no cap | no-caps): user.dictation_format_no_cap()

@@ -478,6 +478,7 @@ class Actions:
 dictation_ctx = Context()
 dictation_ctx.matches = r"""
 mode: dictation
+# and not mode: command
 """
 
 

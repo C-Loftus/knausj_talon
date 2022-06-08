@@ -46,6 +46,12 @@ state enum <user.text>:
 toggle use: user.code_toggle_libraries()
 
 ## Simple aliases
+scope: 
+    "{}"
+    key(left)
+    key(enter)
+cologne: "::"
+arrow: "=>"
 borrow: "&"
 borrow mutable: "&mut "
 state (pub | public): "pub "
@@ -102,3 +108,7 @@ macro wrap {user.code_macros}:
 block dock comment: user.code_comment_documentation_block()
 inner dock comment: user.code_comment_documentation_inner()
 inner block dock comment: user.code_comment_documentation_block_inner()
+
+cargo run:
+    user.vscode("rust-analyzer.run")
+    key(enter)

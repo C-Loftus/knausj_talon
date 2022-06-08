@@ -1,4 +1,4 @@
-not mode: sleep
+rnot mode: sleep
 -
 ^dictation mode$:
     mode.disable("sleep")
@@ -26,4 +26,4 @@ not mode: sleep
     mode.disable("sleep")
     mode.enable("dictation")
     mode.enable("command")
-    user.draw_mode("mixed")
+    user.draw_mode("mixed") 

@@ -2,7 +2,7 @@ app: firefox
 -
 tag(): browser
 tag(): user.tabs
-tab search:
+search:
     browser.focus_address()
     insert("% ")
 tab search <user.text>$:
