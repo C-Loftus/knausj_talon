@@ -478,9 +478,9 @@ class Actions:
 dictation_ctx = Context()
 dictation_ctx.matches = r"""
 mode: dictation
+### BETA CHANGE
 # and not mode: command
 """
-
 
 @dictation_ctx.action_class("main")
 class main_action:

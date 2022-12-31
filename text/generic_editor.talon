@@ -125,7 +125,15 @@ clear word left:
     edit.extend_word_left()
     edit.delete()
 
+cleft:
+    edit.extend_word_left()
+    edit.delete()
+
 clear word right:
+    edit.extend_word_right()
+    edit.delete()
+
+cright:
     edit.extend_word_right()
     edit.delete()
 

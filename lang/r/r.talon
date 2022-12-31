@@ -41,3 +41,7 @@ state na:
 ^function define <user.text>$: user.code_private_function(text)
 
 named arg {user.code_parameter_name}: user.code_insert_named_argument(code_parameter_name)
+
+pepper:
+    key(ctrl-shift-m)
+

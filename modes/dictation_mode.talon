@@ -1,4 +1,5 @@
 mode: dictation
+### BETA CHANGE
 experiment: anchor-file
 -
 ^press <user.modifiers>$: key(modifiers)
@@ -9,6 +10,7 @@ experiment: anchor-file
 
 ### comment the line below and uncomment the line below that if you want to getDictation mode working better with mixed mode 
 <user.raw_prose>: auto_insert(raw_prose)
+### BETA CHANGE
 # <user.raw_prose>: user.dictation_insert(raw_prose)
 
 cap: user.dictation_format_cap()

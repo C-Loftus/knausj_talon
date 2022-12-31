@@ -55,5 +55,5 @@ settings():
 # tag(): user.mouse_cursor_commands_enable
 
 
-tag(): user.full_mouse_grid_enabled
+# tag(): user.full_mouse_grid_enabled
 tag(): user.cursorless_experimental_snippets
