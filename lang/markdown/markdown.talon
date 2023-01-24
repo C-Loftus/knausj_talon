@@ -16,3 +16,12 @@ level three bullet: "      - "
     key(enter:2)
     "```"
     key(up)
+
+new foonote: 
+    user.paste("\\footnote{}")
+    key(left)
+
+new citation: 
+    user.paste("[@]")
+    key(left)
+    

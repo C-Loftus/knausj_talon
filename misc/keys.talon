@@ -10,3 +10,8 @@ go <user.arrow_keys>: user.move_cursor(arrow_keys)
 press <user.modifiers>: key(modifiers)
 # for consistency with dictation mode and explicit arrow keys if you need them.
 press <user.keys>: key(keys)
+
+
+# Uncomment this if you want the functionality of holding down keys
+# hold down <user.keys>: key("{keys}:down")
+# release <user.keys>: key("{keys}:up")
