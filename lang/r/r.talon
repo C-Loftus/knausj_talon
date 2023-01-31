@@ -39,13 +39,8 @@ state na: insert("NA")
 # TODO: migrate to function tag
 ^function define <user.text>$: user.code_private_function(text)
 
-<<<<<<< HEAD
 named arg {user.code_parameter_name}: user.code_insert_named_argument(code_parameter_name)
 
 pepper:
     key(ctrl-shift-m)
 
-=======
-named arg {user.code_parameter_name}:
-    user.code_insert_named_argument(code_parameter_name)
->>>>>>> upstream/main
