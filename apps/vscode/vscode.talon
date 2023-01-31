@@ -241,6 +241,5 @@ skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
 cell next: user.vscode("jupyter.gotoNextCellInFile")
 cell last: user.vscode("jupyter.gotoPrevCellInFile")
 cell run above: user.vscode("jupyter.runallcellsabove.palette")
-cell run: user.vscode("jupyter.runcurrentcell")
-
+cell run: user.vscode("notebook.cell.execute")
 install local: user.vscode("workbench.extensions.action.installVSIX")

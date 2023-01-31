@@ -24,4 +24,7 @@ new foonote:
 new citation: 
     user.paste("[@]")
     key(left)
-    
+
+new link: 
+    user.paste("\\url{}")
+    key(left)
