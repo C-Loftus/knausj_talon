@@ -5,19 +5,8 @@ experiment: anchor-file
 ^press <user.modifiers>$: key(modifiers)
 ^press <user.keys>$: key(keys)
 
-<<<<<<< HEAD:modes/dictation_mode.talon
-# Everything here should call `auto_insert()` (instead of `insert()`), to preserve the state to correctly auto-capitalize/auto-space.
-# (Talonscript string literals implicitly call `auto_insert`, so there's no need to wrap those)
-
-### comment the line below and uncomment the line below that if you want to getDictation mode working better with mixed mode 
-<user.raw_prose>: auto_insert(raw_prose)
-### BETA CHANGE
-# <user.raw_prose>: user.dictation_insert(raw_prose)
-
-=======
 # Everything here should call `user.dictation_insert()` instead of `insert()`, to correctly auto-capitalize/auto-space.
 <user.raw_prose>: user.dictation_insert(raw_prose)
->>>>>>> upstream/main:core/modes/dictation_mode.talon
 cap: user.dictation_format_cap()
 # Hyphenated variants are for Dragon.
 (no cap | no-caps): user.dictation_format_no_cap()
