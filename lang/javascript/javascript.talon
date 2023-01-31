@@ -50,8 +50,12 @@ state reduce: app.notify('ERROR: Command deprecated; please use "dot reduce"')
 
 state spread: "..."
 
+<<<<<<< HEAD
 from import:
     user.insert_between(' from  "', '"')
 
 console log:
     user.insert_between("console.log(", ")")
+=======
+from import: user.insert_between(' from  "', '"')
+>>>>>>> upstream/main
