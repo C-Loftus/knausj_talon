@@ -451,23 +451,5 @@ class Actions:
             actions.edit.extend_word_right()
             after = actions.edit.selected_text()[1:]
             actions.edit.left()
-<<<<<<< HEAD:code/dictation.py
-        return after
-
-
-# Use the dictation formatter in dictation mode.
-dictation_ctx = Context()
-dictation_ctx.matches = r"""
-mode: dictation
-### BETA CHANGE
-# and not mode: command
-"""
-
-@dictation_ctx.action_class("main")
-class main_action:
-    def auto_insert(text):
-        actions.user.dictation_insert(actions.auto_format(text))
-=======
             actions.key("delete")  # remove space
         return before, after
->>>>>>> upstream/main:core/text/text_and_dictation.py
