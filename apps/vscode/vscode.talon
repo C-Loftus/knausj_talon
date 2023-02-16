@@ -270,9 +270,48 @@ skip word: user.vscode("editor.action.moveSelectionToNextFindMatch")
 
 # jupyter
 cell next: user.vscode("notebook.focusNextEditor")
+
+
 cell last: user.vscode("notebook.focusPreviousEditor")
-cell run above: user.vscode("notebook.cell.executeCellsAbove")
-cell run: user.vscode("notebook.cell.execute")
+cell run above: 
+    user.vscode("notebook.cell.executeCellsAbove")
+    user.vscode("jupyter.runallcellsabove.palette")
+
+cell run: 
+    user.vscode("notebook.cell.execute")
+    user.vscode("jupyter.runcurrentcell")
+
+consume [<number_small>] : 
+    times = number_small or 1
+    times = times - 1
+    user.vscode("notebook.cell.execute")
+    user.vscode("notebook.focusNextEditor")
+
+    user.vscode("jupyter.runcurrentcell")
+    user.vscode("jupyter.gotoNextCellInFile")
+
+    repeat(times)
+    
+jump [<number_small>] :
+    times = number_small or 1
+    times = times - 1
+    user.vscode("notebook.focusNextEditor")
+
+    user.vscode("jupyter.gotoNextCellInFile")
+    repeat(times)
+
+export to notebook:
+    user.vscode("jupyter.exportfileandoutputasnotebook")
+
+export to python:
+    user.vscode("jupyter.exportAsPythonScript")
+    user.vscode("workbench.action.files.save")
+
+
+fall <number_small> :
+    user.vscode("notebook.focusPreviousEditor")
+    user.vscode("jupyter.gotoPrevCellInFile")
+    repeat(number_small-1)
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
