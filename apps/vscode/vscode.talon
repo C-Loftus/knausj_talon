@@ -313,5 +313,8 @@ fall <number_small> :
     user.vscode("jupyter.gotoPrevCellInFile")
     repeat(number_small-1)
 
+
+# eat, jupyter.runcurrentcell
+# swallow, jupyter.runallcellsabove.palette 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")

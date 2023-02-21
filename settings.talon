@@ -13,7 +13,10 @@ settings():
     user.help_max_contexts_per_page = 20
 
     # The default amount used when scrolling continuously
-    user.mouse_continuous_scroll_amount = 80
+    user.mouse_continuous_scroll_amount = 350
+
+    # The amount to scroll up/down (equivalent to mouse wheel on Windows by default)
+    user.mouse_wheel_down_amount = 100
 
     # Stop continuous scroll/gaze scroll with a pop
     user.mouse_enable_pop_stops_scroll = 1
@@ -28,8 +31,6 @@ settings():
     # Hide cursor when mouse_wake is called to enable zoom mouse
     user.mouse_wake_hides_cursor = 0
 
-    # The amount to scroll up/down (equivalent to mouse wheel on Windows by default)
-    user.mouse_wheel_down_amount = 120
 
     # The amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 40
@@ -51,6 +52,8 @@ settings():
     # per-application basis.
     # user.context_sensitive_dictation = 1
     imgui.dark_mode = 1
+
+    user.scroll_speed = 1.0
 
     # How to resize windows moved across physical screens (eg. via `snap next`).
     # Default is 'proportional', which preserves window size : screen size ratio.
