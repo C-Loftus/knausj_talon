@@ -14,6 +14,10 @@ phrase <user.text> over:
     user.add_phrase_to_history(user.word)
     insert(user.word)
 
+talk <user.word>:
+    user.add_phrase_to_history(user.word)
+    insert(" {user.word} ")
+
 
 recent list: user.toggle_phrase_history()
 recent close: user.phrase_history_hide()

@@ -17,7 +17,7 @@ level three bullet: "      - "
     "```"
     key(up)
 
-new foonote: 
+new footnote: 
     user.paste("\\footnote{}")
     key(left)
 
@@ -28,3 +28,9 @@ new citation:
 new link: 
     user.paste("\\url{}")
     key(left)
+
+new slide: 
+    key(down)
+    key(enter)
+    user.paste("---")
+    

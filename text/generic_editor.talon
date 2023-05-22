@@ -133,9 +133,10 @@ clear word right:
     edit.extend_word_right()
     edit.delete()
 
-cright:
+cright | crate:
     edit.extend_word_right()
     edit.delete()
+    
 
 clear way left:
     edit.extend_line_start()

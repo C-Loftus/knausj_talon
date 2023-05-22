@@ -13,7 +13,7 @@ settings():
     user.help_max_contexts_per_page = 20
 
     # The default amount used when scrolling continuously
-    user.mouse_continuous_scroll_amount = 350
+    user.mouse_continuous_scroll_amount = 150
 
     # The amount to scroll up/down (equivalent to mouse wheel on Windows by default)
     user.mouse_wheel_down_amount = 100
@@ -53,7 +53,7 @@ settings():
     # user.context_sensitive_dictation = 1
     imgui.dark_mode = 1
 
-    user.scroll_speed = 1.0
+    # user.scroll_speed = 1.0
 
     # How to resize windows moved across physical screens (eg. via `snap next`).
     # Default is 'proportional', which preserves window size : screen size ratio.

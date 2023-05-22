@@ -57,3 +57,11 @@ from import: user.insert_between("from ", " import ")
 print:
     insert('print()')
     key(left)
+
+code block:
+    insert("#%%")
+    key(enter)
+
+markdown block:
+    insert("#%% [markdown]")
+    key(enter)

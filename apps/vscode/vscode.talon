@@ -292,7 +292,7 @@ consume [<number_small>] :
 
     repeat(times)
     
-jump [<number_small>] :
+jump [<number_small>]:
     times = number_small or 1
     times = times - 1
     user.vscode("notebook.focusNextEditor")
