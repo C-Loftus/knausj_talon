@@ -8,7 +8,7 @@ draft all:
     edit.select_all()
     user.draft_editor_open()
 
-draft line:
+draft line: 
     edit.select_line()
     user.draft_editor_open()
 

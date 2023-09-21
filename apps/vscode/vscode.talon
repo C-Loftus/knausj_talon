@@ -60,7 +60,7 @@ centered switch: user.vscode("workbench.action.toggleCenteredLayout")
 fullscreen switch: user.vscode("workbench.action.toggleFullScreen")
 theme switch: user.vscode("workbench.action.selectTheme")
 wrap switch: user.vscode("editor.action.toggleWordWrap")
-zen switch: user.vscode("workbench.action.toggleZenMode")
+(zen | then) switch: user.vscode("workbench.action.toggleZenMode")
 
 # File Commands
 file hunt [<user.text>]:
@@ -281,6 +281,10 @@ cell run:
     user.vscode("notebook.cell.execute")
     user.vscode("jupyter.runcurrentcell")
 
+cell run all:
+    user.vscode("notebook.execute")
+    user.vscode("jupyter.runallcells")
+
 consume [<number_small>] : 
     times = number_small or 1
     times = times - 1
@@ -318,3 +322,34 @@ fall <number_small> :
 # swallow, jupyter.runallcellsabove.palette 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+(cell insert | cell new): 
+    user.vscode("jupyter.insertCellBelow")
+    user.vscode("notebook.cell.insertCodeCellBelow")
+
+cell join above:
+    user.vscode("notebook.cell.joinAbove")
+
+cell join below:
+    user.vscode("notebook.cell.joinBelow")
+    
+split cell:
+    user.vscode("notebook.cell.split")
+
+(cell delete | chuck cell):
+    user.vscode("notebook.cell.delete")
+
+
+decode this:
+    mouse_click(0)
+    key(ctrl-c)
+    chrome = user.get_running_app("Visual Studio Code")
+    user.switcher_focus_app(chrome)
+    text = clip.text()
+    insert('"{text}:,')
+    key(left)
+    key(backspace-2)
+
+paste as string:
+    text = clip.text()
+    user.paste('"{text}":')

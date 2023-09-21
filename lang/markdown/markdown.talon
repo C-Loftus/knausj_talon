@@ -12,9 +12,11 @@ level two bullet: "   - "
 level three bullet: "      - "
 
 {user.markdown_code_block_language} block:
-    "```{markdown_code_block_language}"
-    key(enter:2)
-    "```"
+    user.paste("```{markdown_code_block_language}\n\n```")
+    key(up)
+
+code block:
+    user.paste("```\n\n```")
     key(up)
 
 new footnote: 
@@ -31,6 +33,6 @@ new link:
 
 new slide: 
     key(down)
-    key(enter)
-    user.paste("---")
+    sleep(0.5)
+    user.paste("\n---\n")
     

@@ -1,7 +1,7 @@
 tag: user.r
+
 -
 tag(): user.code_imperative
-
 tag(): user.code_comment_line
 tag(): user.code_data_bool
 tag(): user.code_data_null
@@ -34,6 +34,13 @@ library <user.code_libraries>:
     key(end)
     " %>%"
     key(enter)
+    
+pipe:
+    key(end)
+    " %>% "
+
+
+
 state na: insert("NA")
 
 # TODO: migrate to function tag

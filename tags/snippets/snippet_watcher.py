@@ -6,9 +6,10 @@
 # import json
 # from jsoncomment import JsonComment
 
+key
 # parser = JsonComment(json)
 
-
+	
 # class snippet_watcher:
 #     directories = {}
 #     snippet_dictionary = {}

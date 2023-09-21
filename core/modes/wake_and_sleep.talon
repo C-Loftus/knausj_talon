@@ -15,6 +15,6 @@ mode: all
     user.engine_sleep()
 ^talon sleep [<phrase>]$: speech.disable()
 ^[<phrase>] drowsy$: speech.disable()
-trouser: speech.disable()
+^trouser$: speech.disable()
 ^talon wake$: speech.enable()
 

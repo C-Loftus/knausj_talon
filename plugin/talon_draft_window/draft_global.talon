@@ -36,3 +36,5 @@ mode: command
     text = edit.selected_text()
     key(backspace)
     user.draft_show(text)
+
+    
