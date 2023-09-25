@@ -1,5 +1,4 @@
-tag: user.r
-
+code.language: r
 -
 tag(): user.code_imperative
 tag(): user.code_comment_line

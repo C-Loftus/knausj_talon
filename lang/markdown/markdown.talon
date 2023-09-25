@@ -1,11 +1,42 @@
-tag: user.markdown
+code.language: markdown
 -
-level one: "# "
-level two: "## "
-level three: "### "
-level four: "#### "
-level five: "##### "
-level six: "###### "
+(level | heading | header) one:
+    edit.line_start()
+    "# "
+(level | heading | header) two:
+    edit.line_start()
+    "## "
+(level | heading | header) three:
+    edit.line_start()
+    "### "
+(level | heading | header) four:
+    edit.line_start()
+    "#### "
+(level | heading | header) five:
+    edit.line_start()
+    "##### "
+(level | heading | header) six:
+    edit.line_start()
+    "###### "
+
+list [one]:
+    edit.line_start()
+    "- "
+list two:
+    edit.line_start()
+    "    - "
+list three:
+    edit.line_start()
+    "        - "
+list four:
+    edit.line_start()
+    "            - "
+list five:
+    edit.line_start()
+    "                - "
+list six:
+    edit.line_start()
+    "                    - "
 
 bullet: "- "
 level two bullet: "   - "
@@ -36,3 +67,6 @@ new slide:
     sleep(0.5)
     user.paste("\n---\n")
     
+link:
+    "[]()"
+    key(left:3)

@@ -7,6 +7,8 @@ window close: app.window_close()
 
 # focus <user.running_applications>: 
 #     user.jump_workspace_and_switch_focus(running_applications)
+window hide: app.window_hide()
+focus <user.running_applications>: user.switcher_focus(running_applications)
 # following only works on windows. Can't figure out how to make it work for mac. No idea what the equivalent for linux would be.
 focus$: user.switcher_menu()
 running list: user.switcher_toggle_running()

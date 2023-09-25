@@ -1,6 +1,6 @@
-tag: user.typescript
+code.language: typescript
+code.language: typescriptreact
 -
-tag(): user.javascript
 
 export funky <user.text>:
     "export function "
@@ -12,3 +12,10 @@ export funky <user.text>:
     key(end)
     sleep(.1)
     key("left:3")
+
+type union [<user.code_type>]: " | {code_type or ''}"
+type intersect [<user.code_type>]: " & {code_type or ''}"
+
+state type: user.insert_between("type ", " = ")
+
+as const: " as const"
