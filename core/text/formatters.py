@@ -172,6 +172,7 @@ formatters_dict = {
 code_formatter_names = {
     "all cap": "ALL_CAPS",
     "all down": "ALL_LOWERCASE",
+    "body": "ALL_LOWERCASE",
     "camel": "PRIVATE_CAMEL_CASE",
     "dotted": "DOT_SEPARATED",
     "dub string": "DOUBLE_QUOTED_STRING",
