@@ -6,7 +6,6 @@
 # import json
 # from jsoncomment import JsonComment
 
-key
 # parser = JsonComment(json)
 
 	
