@@ -18,4 +18,4 @@ kill all: user.terminal_kill_all()
 copy paste:
     edit.copy()
     sleep(50ms)
-    edit.paste()
+    edit.paste() 
