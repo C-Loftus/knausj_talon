@@ -69,6 +69,7 @@ tag: user.code_language_forced
 
 mod.tag("code_language_forced", "This tag is active when a language mode is forced")
 mod.list("language_mode", desc="Name of a programming language mode.")
+mod.list("decoded_language_mode", desc="Name of a programming language mode.")
 
 ctx.lists["self.language_mode"] = {
     name: language
@@ -76,12 +77,17 @@ ctx.lists["self.language_mode"] = {
     for name in language_name_overrides.get(language, [language])
 }
 
+
+
 # Maps extension to languages.
 extension_lang_map = {
     "." + ext: language
     for language, extensions in language_extensions.items()
     for ext in extensions.split()
 }
+
+# reverse keys and values in extension_lang_map
+ctx.lists["user.decoded_language_mode"] = {v: k for k, v in extension_lang_map.items()}
 
 forced_language = ""
 
@@ -100,7 +106,7 @@ class ForcedCodeActions:
 
 
 @mod.action_class
-class Actions:
+class Actions: 
     def code_set_language_mode(language: str):
         """Sets the active language mode, and disables extension matching"""
         global forced_language
