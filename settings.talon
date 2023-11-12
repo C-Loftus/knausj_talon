@@ -1,4 +1,3 @@
--
 settings():
     # Adjust the scale of the imgui to my liking
     imgui.scale = 1.3
@@ -36,7 +35,6 @@ settings():
     # Hide cursor when mouse_wake is called to enable zoom mouse
     user.mouse_wake_hides_cursor = 0
 
-
     # The amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 40
 
@@ -72,5 +70,5 @@ settings():
 
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 tag(): user.mouse_cursor_commands_enable
-# 
+#
 # tag(): user.full_mouse_grid_enabled

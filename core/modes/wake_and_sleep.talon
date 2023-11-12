@@ -15,7 +15,14 @@ mode: all
     user.engine_sleep()
 ^talon sleep [<phrase>]$: speech.disable()
 ^[<phrase>] drowsy$: speech.disable()
+^one (sec | second) $: speech.disable()
+^(hey | he) (siri | serie)$:
+    speech.disable()
 ^trouser$: speech.disable()
 ^talon wake$: speech.enable()
 
 ^(talon wake)+$: speech.enable()
+^(stop listening)+$: speech.enable()
+
+^(start listening)+$: speech.disable()
+

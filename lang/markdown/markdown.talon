@@ -77,22 +77,5 @@ new footnote <number_small>:
 link footnote <number_small>: 
     user.paste(" [^{number_small}] ")
 
-compile word: 
-    path = user.get_dirname()
-    user.vscode("workbench.action.terminal.focus")
-    sleep(0.1)
-    clip.set_text("cd {path}\n")
-    key(ctrl-shift-v)
-    user.compile_markdown()
-    sleep(0.2)
-    key(enter)
 
-compile powerpoint:
-    path = user.get_dirname()
-    user.vscode("workbench.action.terminal.focus")
-    sleep(0.1)
-    clip.set_text("cd {path}\n")
-    key(ctrl-shift-v)
-    user.compile_powerpoint()
-    sleep(0.2)
-    key(enter)
+

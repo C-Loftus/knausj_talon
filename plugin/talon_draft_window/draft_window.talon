@@ -33,7 +33,7 @@ replace <user.draft_anchor> with <user.text>:
 
 # Delete a range of words
 (change | chuck | clear) <user.draft_anchor> (through | past) <user.draft_anchor>:
-    user.draft_select(draft_anchor_1, draft_anchor_2, 1)
+    user.draft_select(draft_anchor_1, draft_anchor_2, 1) 
     key(backspace)
 
 # reformat word
@@ -45,3 +45,4 @@ replace <user.draft_anchor> with <user.text>:
 <user.formatters> <user.draft_anchor> (through | past) <user.draft_anchor>:
     user.draft_select(draft_anchor_1, draft_anchor_2, 1)
     user.formatters_reformat_selection(user.formatters)
+

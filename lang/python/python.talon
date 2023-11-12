@@ -65,3 +65,7 @@ code block:
 markdown block:
     insert("#%% [markdown]")
     key(enter)
+
+(format | eff) string:
+    user.paste("f''")
+    key(left)

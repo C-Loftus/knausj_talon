@@ -16,6 +16,7 @@ https://www.soundcloud.com/, soundcloud
 https://app.slack.com/client/T7FPSMV8F/, slack
 127.0.0.1:8000/, localhost
 http://localhost:1313/, Hugo
+http://127.0.0.1:8080/files/, files
 
 https://www.notion.so, notion
 https://teams.microsoft.com, teams

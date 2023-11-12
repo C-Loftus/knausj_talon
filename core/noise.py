@@ -24,7 +24,6 @@ class Actions:
         example.
         """
 
-
 def noise_trigger_hiss_debounce(active: bool):
     """Since the hiss noise triggers while you're talking we need to debounce it"""
     global hiss_cron
