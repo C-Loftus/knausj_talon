@@ -88,6 +88,7 @@ extension_lang_map = {
 
 # reverse keys and values in extension_lang_map
 ctx.lists["user.decoded_language_mode"] = {v: k for k, v in extension_lang_map.items()}
+language_ids = set(language_extensions.keys())
 
 forced_language = ""
 
