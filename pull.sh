@@ -1,2 +1,2 @@
-git fetch upstream main
+git fetch community
 git pull
