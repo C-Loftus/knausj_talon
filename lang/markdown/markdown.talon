@@ -43,8 +43,7 @@ level two bullet: "   - "
 level three bullet: "      - "
 
 {user.markdown_code_block_language} block:
-    user.paste("```{markdown_code_block_language}\n\n```")
-    key(up)
+    user.insert_snippet("```{markdown_code_block_language}\n$0\n```")
 
 code block:
     user.paste("```\n\n```")
