@@ -2,7 +2,6 @@ import itertools
 import math
 import re
 from collections import defaultdict
-from functools import cmp_to_key
 from itertools import islice
 from typing import Any, Iterable, Tuple
 
@@ -69,13 +68,16 @@ def update_title():
             if selected_context is None:
                 refresh_context_command_map(show_enabled_contexts_only)
             else:
-                update_active_contexts_cache(registry.active_contexts())
+                update_active_contexts_cache(registry.last_active_contexts)
 
 
 @imgui.open(y=0)
 def gui_formatters(gui: imgui.GUI):
     global formatters_words
-    gui.text("formatters help")
+    if formatters_reformat:
+        gui.text("re-formatters help")
+    else:
+        gui.text("formatters help")
     gui.line()
 
     for key, val in formatters_words.items():
@@ -393,7 +395,7 @@ overrides = {}
 
 
 def refresh_context_command_map(enabled_only=False):
-    active_contexts = registry.active_contexts()
+    active_contexts = registry.last_active_contexts
 
     local_context_map = {}
     local_display_name_to_context_name_map = {}
@@ -543,7 +545,7 @@ def draw_list_commands(gui: imgui.GUI):
     global total_page_count
     global selected_context_page
 
-    talon_list = registry.lists[selected_list][-1]
+    talon_list = actions.user.talon_get_active_registry_list(selected_list)
     # numpages = math.ceil(len(talon_list) / SIZE)
 
     pages_list = []
@@ -604,11 +606,12 @@ class Actions:
         register_events(True)
         ctx.tags = ["user.help_open"]
 
-    def help_formatters(ab: dict):
+    def help_formatters(ab: dict, reformat: bool):
         """Provides the list of formatter keywords"""
         # what you say is stored as a trigger
-        global formatters_words
+        global formatters_words, formatters_reformat
         formatters_words = ab
+        formatters_reformat = reformat
         reset()
         hide_all_help_guis()
         gui_formatters.show()
@@ -655,7 +658,7 @@ class Actions:
             refresh_context_command_map()
         else:
             selected_context_page = 1
-            update_active_contexts_cache(registry.active_contexts())
+            update_active_contexts_cache(registry.last_active_contexts)
 
         selected_context = m
         hide_all_help_guis()
@@ -757,7 +760,7 @@ class Actions:
             if selected_context is None:
                 refresh_context_command_map(show_enabled_contexts_only)
             else:
-                update_active_contexts_cache(registry.active_contexts())
+                update_active_contexts_cache(registry.last_active_contexts)
 
     def help_hide():
         """Hides the help"""
