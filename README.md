@@ -1,3 +1,5 @@
+**NOTE: Colton no longer uses a forked version of knausj. This is here for historical / backup reasons. All relevant talon code can be found here: https://github.com/C-Loftus/colton_talon **
+
 # community
 
 Voice command set for [Talon](https://talonvoice.com/), community-supported.
